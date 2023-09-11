@@ -2,6 +2,9 @@ header{
   height: 110px;
 }
 body {
+  background-image: url(../img/Home.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
   background-color: #000;
   font-family: 'Serif';
   margin: 0; 
@@ -55,7 +58,8 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  box-shadow: 0px 2px 4px rgba(80, 65, 65, 0.2);
+  box-sizing: border-box;
+  box-shadow: 2px 4px 8px rgba(107, 102, 102, 0.2);
 }
 nav h1{
   color: #FFF;
