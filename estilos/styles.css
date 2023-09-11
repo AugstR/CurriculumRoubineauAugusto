@@ -1,38 +1,40 @@
 header{
+  padding: 0;
+  margin: 0;
   height: 110px;
 }
 body {
-  background-image: url(../img/Home.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-color: #000;
   font-family: 'Serif';
   margin: 0; 
   padding: 0;
   display: flex;
   flex-direction: column;
-  min-height: 100vh
-}
-section{
-  height: 750px;
 }
 
-.footer{
-  position: relative;
-  background-color: #5A5A5A;
+nav {
+  background-color:black;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  height: 110px;
   width: 100%;
-  margin: 0;
-  padding: 0;
-  bottom: 0%;
+  flex-shrink: 0;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 8px 8px #989898
 }
-.fin{
-  position: relative;
-  text-align: center;
+nav h1{
+  color: white;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
-
-
+nav h1:hover{
+  color:#888888 
+}
 .Botones a{
-  background-color: black; /* Cambia el color de fondo a tu preferencia */
   color: white; /* Cambia el color del texto a tu preferencia */
   padding: 10px 20px; 
   text-decoration: none;
@@ -50,26 +52,9 @@ section{
   background-color: white;
   color: black;
 }
-nav {
-  height: 110px;
-  flex-shrink: 0;
-  background-color:#5A5A5A;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  box-sizing: border-box;
-  box-shadow: 2px 4px 8px rgba(107, 102, 102, 0.2);
-}
-nav h1{
-  color: #FFF;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
+
 .main-content h1{
-  color: #f1f1f1;
+  color: white;
     position: absolute;
     top: 10vh;
     left: 14vh;
@@ -77,7 +62,7 @@ nav h1{
     font-weight: 700;
 }
 .main-content p{
-  color: #f1f1f1;
+  color: white;
     position: absolute;
     top: 22vh;
     left: 14vh;
@@ -87,43 +72,66 @@ nav h1{
 
 }
 .main-content h2{
-  color: #f1f1f1;
+  color: white;
   position: absolute;
   top: 10vh;
   left: 14vh;
   font-size: 80px;
   font-weight: 700;
 }
+.fondo{
+  background-image: url(../img/Home.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 800px;
 
-.bxl-linkedin-square,
-.bxl-github{
-  font-size: 30px; /* Ajusta el tamaño */
-  margin-right: 2px; /* añade margen derecho para separar los iconos */
+}
+.fondo::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: #000;
+  opacity: 0.6;
+}
+
+.footer{
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  color:white;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 2px -8px 8px #989898
+
+}
+.contacto{
+  margin-top: 5px;
+  margin-left: 5px;
+}
+.fin{
+  background-color: black;
+  position: relative;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.bxl-linkedin-square{
+  font-size: 30px;
   color: #0e76a8;
-  display: inline-block;
-  background-color: white;
-  border-radius: 50%; /* Iconos tengan forma de círculo (opcional) */
-  border: 1px solid #000;
+
+}
+.bxl-github{
+  font-size: 30px;
+  color: white;
 }
 
 .bxl-gmail{
-  background-color: white;
-  border: 1px solid #000;
-  border-radius:50%;
-  font-size: 30px;
-  color: #db4a39
-}
-
-
-.bxs-phone{
-  font-size: 22px;
-}
-
-
-.bxs-pin{
-  border-radius: 50%;
-  background-color: white;
-  font-size: 20px;
-  border: 1px solid #000;
+  vertical-align: bottom;
+  font-size: 20px; 
   color: #db4a39
 }
