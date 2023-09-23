@@ -1,22 +1,34 @@
 header{
   padding: 0;
   margin: 0;
-  height: 110px;
+  width: 100%;
 }
 body {
   font-family: 'Serif';
   margin: 0; 
   padding: 0;
-  display: flex;
-  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.footer{
+  background-color: black;
+  bottom: 0;
+  left: 0;
+  position: relative;
+  color:white;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  box-shadow: 2px -8px 8px #989898
+
 }
 
 nav {
   background-color:black;
   position: relative;
   display: flex;
-  justify-content: space-around;
-  height: 15vh;
+  justify-content: space-between;
+  height: 10vh;
   width: 100%;
   flex-shrink: 0;
   align-items: center;
@@ -26,21 +38,25 @@ nav {
 }
 nav h1{
   color: white;
-  font-size: 40px;
+  font-size: 5vh;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 nav h1:hover{
-  color:#888888 
+  background-color: white;
+  border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
+  border-radius: 10px; /* Esto crea bordes redondos */
+  padding: 3px; 
+  color: #000;
 }
-.titulo{
-  justify-content: flex-start;
-}
+  
 .Botones a{
   color: white; /* Cambia el color del texto a tu preferencia */
+  border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
   padding: 10px 20px; 
   text-decoration: none;
+  position: relative;
   border-radius: 5px; /* Bordes redondeados */
   margin-bottom: 10px; /* Margen inferior entre los botones */
   cursor: pointer;
@@ -55,70 +71,62 @@ nav h1:hover{
   background-color: white;
   color: black;
 }
-
-.main-content h1{
-  color: white;
-    position: absolute;
-    top: 10vh;
-    left: 14vh;
-    font-size: 80px;
-    font-weight: 700;
-}
-.main-content p{
-  color: white;
-    position: absolute;
-    top: 22vh;
-    left: 14vh;
-    font-size: 35px;
-    font-weight: 300;
-    line-height: 1.1;
-
-}
-.main-content h2{
-  color: white;
-  position: absolute;
-  top: 10vh;
-  left: 14vh;
-  font-size: 80px;
-  font-weight: 700;
-}
-.fondo{
+.main-content {
   background-image: url(../img/Home.jpg);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: top center;
   width: 100%;
   height: 100vh;
-
 }
-.fondo::before{
+.main-content:before{
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   background-color: #000;
   opacity: 0.6;
 }
 
-.footer{
-  background-color: black;
-  bottom: 0;
-  left: 0;
+.main-content h1{
+  color: white;
+  text-align: center;
+  font-size: 7vh;
+  font-weight: 2vh;
+  padding: 0;
+  margin: 0;
   position: relative;
-  color:white;
-  width: 100%;
+}
+.main-content p{
+  color: white;
+  font-size: 4vh;
+  padding: 0;
+  margin: 0;
+  margin-left: 14vh;
+    
+}
+.main-content h2{
+  color: white;
+  text-align: center;
+  font-size: 7vh;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  box-shadow: 2px -8px 8px #989898
-
 }
+.parrafo{
+  padding: 0;
+  height: 100%;
+}
+
 .contacto{
   margin-top: 5px;
   margin-left: 5px;
 }
+.contacto p{
+  padding: 0;
+  margin: 0;
+}
 .fin{
   background-color: black;
-  position: relative;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -137,4 +145,67 @@ nav h1:hover{
   vertical-align: bottom;
   font-size: 20px; 
   color: #db4a39
+}
+
+@media all and (max-width: 700px) {
+  /*cuando el dispositivo es como máximo de 700px*/
+
+  input:checked~ul {
+      /*muestra todas el contenido de todas las etiquetas ul*/
+      display: block;
+  }
+
+  input:checked~label {
+      /*muestra todo el contenido de todas las etiquetas label*/
+      background: #000000;
+  }
+
+  label:hover {
+      /*cambia el color de ☰*/
+      background: #ffffff;
+  }
+
+  li {
+      /*elimina el margen  de cada botón*/
+      margin: 0px;
+      text-align: left;
+  }
+  label {
+      /* dibuja la etiqueta ☰  con formato botón */
+      box-sizing: border-box;
+      display: block;
+      border: 1px solid #000000;
+      border-radius: 5px;
+      width: 30px;
+      height: 30px;
+      line-height: 30px;
+      font-weight: bold;
+      text-align: center;
+      user-select: none;
+      background-color: grey;
+
+  }
+
+
+  ul {
+      /*deja de mostrar el bloque contenedor de los botones horizontales */
+      display: none;
+      background-color: rgb(0, 0, 0);
+
+  }
+
+  .contenedorflex {
+      flex-direction: column;
+      justify-content: center;
+  }
+}
+
+ul li a {
+  text-decoration: none;
+  color: #e22b2b;
+  font-family: 'Arial'
+}
+
+ul li a:hover {
+  color: #fcc3c3;
 }
