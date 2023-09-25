@@ -25,7 +25,6 @@ body {
 
 nav {
   background-color:black;
-  position: relative;
   display: flex;
   justify-content: space-between;
   height: 10vh;
@@ -34,7 +33,8 @@ nav {
   align-items: center;
   padding: 10px 20px;
   box-sizing: border-box;
-  box-shadow: 2px 8px 8px #989898
+  box-shadow: 2px 8px 8px #989898;
+  margin: 0;
 }
 nav h1{
   color: white;
@@ -51,7 +51,7 @@ nav h1:hover{
   color: #000;
 }
   
-.Botones a{
+.Botones{
   color: white; /* Cambia el color del texto a tu preferencia */
   border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
   padding: 10px 20px; 
