@@ -2,12 +2,14 @@ header{
   padding: 0;
   margin: 0;
   height: 110px;
+  display: flex;
 }
 body {
   font-family: 'Serif';
   margin: 0; 
   padding: 0;
   display: flex;
+  position: relative;
   flex-direction: column;
 }
 
@@ -26,20 +28,22 @@ nav {
 }
 nav h1{
   color: white;
-  font-size: 40px;
+  font-size: 5vh;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 nav h1:hover{
-  color:#888888 
+  color:white;
+  font-size: 6vh;
 }
 .titulo{
   justify-content: flex-start;
 }
-.Botones a{
+.navbuttons a{
   color: white; /* Cambia el color del texto a tu preferencia */
-  padding: 10px 20px; 
+  padding: 10px 20px;
+  flex-wrap: wrap; 
   text-decoration: none;
   border-radius: 5px; /* Bordes redondeados */
   margin-bottom: 10px; /* Margen inferior entre los botones */
@@ -51,7 +55,7 @@ nav h1:hover{
 
 
 /* resaltar los botones al pasar el mouse */
-.Botones a:hover {
+.navbuttons a:hover {
   background-color: white;
   color: black;
 }
@@ -59,9 +63,10 @@ nav h1:hover{
 .main-content h1{
   color: white;
     position: absolute;
+    flex-wrap: wrap;
     top: 10vh;
     left: 14vh;
-    font-size: 80px;
+    font-size: 10vh;
     font-weight: 700;
 }
 .main-content p{
@@ -69,10 +74,10 @@ nav h1:hover{
     position: absolute;
     top: 22vh;
     left: 14vh;
-    font-size: 35px;
+    font-size: 5vh;
     font-weight: 300;
     line-height: 1.1;
-
+    text-align: justify;
 }
 .main-content h2{
   color: white;
@@ -94,7 +99,7 @@ nav h1:hover{
   content: "";
   width: 100%;
   height: 100%;
-  position: absolute;
+  position: relative;
   background-color: #000;
   opacity: 0.6;
 }
@@ -103,7 +108,7 @@ nav h1:hover{
   background-color: black;
   bottom: 0;
   left: 0;
-  position: relative;
+  position: absolute;
   color:white;
   width: 100%;
   margin: 0;
@@ -138,3 +143,5 @@ nav h1:hover{
   font-size: 20px; 
   color: #db4a39
 }
+
+    
