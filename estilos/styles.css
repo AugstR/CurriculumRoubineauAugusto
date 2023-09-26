@@ -26,7 +26,7 @@ body {
 nav {
   background-color:black;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   height: 10vh;
   width: 100%;
   flex-shrink: 0;
@@ -35,6 +35,17 @@ nav {
   box-sizing: border-box;
   box-shadow: 2px 8px 8px #989898;
   margin: 0;
+}
+nav ul{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0;
+  padding: 10;
+}
+nav li{
+  display: block;
+  margin: 1vh;
+  padding: 0vh;
 }
 nav h1{
   color: white;
@@ -50,7 +61,6 @@ nav h1:hover{
   padding: 3px; 
   color: #000;
 }
-  
 .Botones{
   color: white; /* Cambia el color del texto a tu preferencia */
   border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
@@ -63,11 +73,17 @@ nav h1:hover{
   align-items: center;
   list-style: none;
   font-weight: 2vh;
+  filter: brightness(115%);
+}
+input{
+  display: none;
+}
+label{
+  display: none;
 }
 
-
 /* resaltar los botones al pasar el mouse */
-.navbuttons a:hover {
+.Botones:hover {
   background-color: white;
   color: black;
 }
@@ -147,65 +163,68 @@ nav h1:hover{
   color: #db4a39
 }
 
-@media all and (max-width: 700px) {
-  /*cuando el dispositivo es como máximo de 700px*/
+@media all and (max-width: 1000px) {     /*cuando el dispositivo es como máximo de 700px*/
 
   input:checked~ul {
-      /*muestra todas el contenido de todas las etiquetas ul*/
-      display: block;
+    display: block;
   }
 
-  input:checked~label {
-      /*muestra todo el contenido de todas las etiquetas label*/
-      background: #000000;
+  input:checked~label { /*muestra todo el contenido de todas las etiquetas label*/
+    background: #fffefe;
   }
 
-  label:hover {
-      /*cambia el color de ☰*/
-      background: #ffffff;
+  label:hover {      /*cambia el color de ☰*/
+    background: lightgray;
   }
 
-  li {
-      /*elimina el margen  de cada botón*/
-      margin: 0px;
-      text-align: left;
+  li { 
+    margin: 0px;
+    text-align: left;
+    display: block;
   }
-  label {
-      /* dibuja la etiqueta ☰  con formato botón */
-      box-sizing: border-box;
-      display: block;
-      border: 1px solid #000000;
-      border-radius: 5px;
-      width: 30px;
-      height: 30px;
-      line-height: 30px;
-      font-weight: bold;
-      text-align: center;
-      user-select: none;
-      background-color: grey;
-
+  li a{
+    position: relative;
+  }
+  nav {
+    padding: 0;
+  }
+  nav ul {
+    display: none;
+    background-color: rgb(0, 0, 0);
   }
 
-
-  ul {
-      /*deja de mostrar el bloque contenedor de los botones horizontales */
-      display: none;
-      background-color: rgb(0, 0, 0);
+  label {      /* dibuja la etiqueta ☰  con formato botón */
+    box-sizing: border-box;
+    display: block;
+    border: 1px solid #ffe7b4;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-weight: bold;
+    text-align: center;
+    user-select: none;
+    background-color: rgb(255, 255, 255);
+  }
+  .main-content p{
+    font-size: 2vh;
+    margin-left: 1vh;
+    margin: 1vh;
+  }
+  .main-content h2{
+    font-size: 4vh;
+  }
+  nav a{
+     display: none;
+     background-color: #000000;
+  } 
+  .main-content h1{
+    font-size: 3vh;
+    text-align: left;
+    margin-left: 2vh;
 
   }
-
-  .contenedorflex {
-      flex-direction: column;
-      justify-content: center;
+  nav ul{
+    display: block;
   }
-}
-
-ul li a {
-  text-decoration: none;
-  color: #e22b2b;
-  font-family: 'Arial'
-}
-
-ul li a:hover {
-  color: #fcc3c3;
 }
