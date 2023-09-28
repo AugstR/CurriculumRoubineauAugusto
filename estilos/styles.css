@@ -102,6 +102,9 @@ label{
   margin: 0;
   padding: 0;
 }
+.main-content ul{
+  margin: 0;
+}
 /* Contenido de la página HOME*/
 .home{
   width: 100%;
@@ -149,19 +152,7 @@ label{
   position: relative;
 }
 
-
-
-
-
-
-
-
-
 /* Contenido del footer*/
-.contacto{
-  margin-top: 5px;
-  margin-left: 5px;
-}
 .contacto p{
   padding: 0;
   margin: 0;
