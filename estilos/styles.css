@@ -1,10 +1,12 @@
+/* Cuerpo del sitio */
+
 header{
   padding: 0;
   margin: 0;
   width: 100%;
 }
 body {
-  font-family: 'Serif';
+  font-family: 'San-Serif';
   margin: 0; 
   padding: 0;
   width: 100%;
@@ -18,62 +20,53 @@ body {
   color:white;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-  box-shadow: 2px -8px 8px #989898
-
 }
 
+/* Barra con Botones */
 nav {
   background-color:black;
   display: flex;
-  justify-content: flex-end;
-  height: 10vh;
-  width: 100%;
+  height: 5rem;
+  flex-shrink: 0;
   flex-shrink: 0;
   align-items: center;
   padding: 10px 20px;
-  box-sizing: border-box;
-  box-shadow: 2px 8px 8px #989898;
   margin: 0;
+  justify-content: space-between;
+}
+
+.Botones{
+  display: flex;
+  color: white; /* Cambia el color del texto a tu preferencia */
+  padding: 10px 20px; 
+  text-decoration: none;
+  position: relative;
+  margin-bottom: 10px; /* Margen inferior entre los botones */
+  cursor: pointer;
+  align-items: center;
+  list-style: none;
+}
+nav .Botones:hover{
+  color: #ffe7b4;
 }
 nav ul{
-  display: flex;
-  justify-content: space-between;
-  margin-top: 0;
-  padding: 10;
-}
-nav li{
-  display: block;
   margin: 1vh;
   padding: 0vh;
+  display: flex;
 }
 nav h1{
   color: white;
-  font-size: 5vh;
+  font-size: 2rem;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
 }
 nav h1:hover{
-  background-color: white;
-  border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
-  border-radius: 10px; /* Esto crea bordes redondos */
-  padding: 3px; 
-  color: #000;
+  color: #ffe7b4;
 }
-.Botones{
-  color: white; /* Cambia el color del texto a tu preferencia */
-  border: 2px solid #ffe7b4; /* Define el grosor y el color del borde */
-  padding: 10px 20px; 
-  text-decoration: none;
-  position: relative;
-  border-radius: 5px; /* Bordes redondeados */
-  margin-bottom: 10px; /* Margen inferior entre los botones */
-  cursor: pointer;
-  align-items: center;
-  list-style: none;
-  font-weight: 2vh;
-  filter: brightness(115%);
+.home{
+  display: flex;
+  align-items: flex-start;
 }
 input{
   display: none;
@@ -81,58 +74,62 @@ input{
 label{
   display: none;
 }
-
-/* resaltar los botones al pasar el mouse */
-.Botones:hover {
-  background-color: white;
-  color: black;
-}
+/* Contenido de la página*/
 .main-content {
-  background-image: url(../img/Home.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: top center;
+  background-color:#0B0B0B;
   width: 100%;
   height: 100vh;
 }
-.main-content:before{
-  content: "";
-  width: 100%;
-  height: 100%;
-  position: relative;
-  background-color: #000;
-  opacity: 0.6;
-}
-
 .main-content h1{
   color: white;
-  text-align: center;
   font-size: 7vh;
   font-weight: 2vh;
   padding: 0;
   margin: 0;
+  margin-left: 4rem;
   position: relative;
 }
 .main-content p{
   color: white;
   font-size: 4vh;
   padding: 0;
-  margin: 0;
-  margin-left: 14vh;
-    
+  margin: 0; 
 }
 .main-content h2{
   color: white;
-  text-align: center;
+  margin-left: 11rem;
   font-size: 7vh;
   margin: 0;
   padding: 0;
 }
-.parrafo{
-  padding: 0;
-  height: 100%;
+/* Contenido de la página HOME*/
+.home{
+  width: 100%;
+  height: 50rem;
+  flex-shrink: 0;
+  background-image: url(../img/Home.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
 }
-
+/* Contenido de la página BIO*/
+.bio{
+  width: 100%;
+  height: 50rem;
+  flex-shrink: 0;
+  background-image: url(../img/Augusto.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+}
+/* Contenido de la página Experiences*/
+.experiencia{
+  background-image: url(../img/Experiencia.png);
+  width: 100%;
+  height: 50rem;
+  flex-shrink: 0;
+  background-repeat: no-repeat;
+}
 .contacto{
   margin-top: 5px;
   margin-left: 5px;
@@ -155,15 +152,21 @@ label{
 .bxl-github{
   font-size: 30px;
   color: white;
+  margin-left: 2vh;
+  margin-top: 1vh;
 }
 
 .bxl-gmail{
   vertical-align: bottom;
   font-size: 20px; 
-  color: #db4a39
+  color: #db4a39;
+  background-color: white;
+  margin-left: 2vh;
+  border-radius: 5px;
+  
 }
 
-@media all and (max-width: 1000px) {     /*cuando el dispositivo es como máximo de 700px*/
+@media all and (max-width: 700px) {     /*cuando el dispositivo es como máximo de 700px*/
 
   input:checked~ul {
     display: block;
@@ -174,7 +177,7 @@ label{
   }
 
   label:hover {      /*cambia el color de ☰*/
-    background: lightgray;
+    background: darkgray;
   }
 
   li { 
