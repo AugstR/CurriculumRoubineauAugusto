@@ -130,6 +130,34 @@ label{
   flex-shrink: 0;
   background-repeat: no-repeat;
 }
+/* Contenido de la página Studies*/
+.studies{
+  width: 100%;
+  height: 50rem;
+  flex-shrink: 0;
+  background-image: url(../img/Estudios.png);
+  background-repeat: no-repeat;
+}
+/* Contenido de la página Competencias*/
+.competencias{
+  width: 100%;
+  height: 50rem;
+  flex-shrink: 0;
+  background-image: url(../img/Estudios.png);
+  background-repeat: no-repeat;
+  background-position: right center;
+  position: relative;
+}
+
+
+
+
+
+
+
+
+
+/* Contenido del footer*/
 .contacto{
   margin-top: 5px;
   margin-left: 5px;
