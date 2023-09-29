@@ -156,6 +156,7 @@ label{
 .contacto p{
   padding: 0;
   margin: 0;
+  margin-left: 2rem;
 }
 .fin{
   background-color: black;
