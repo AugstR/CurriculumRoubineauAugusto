@@ -91,7 +91,7 @@ label{
 }
 .main-content p{
   color: white;
-  font-size: 4vh;
+  font-size: 2rem;
   padding: 0;
   margin: 0; 
 }
@@ -230,12 +230,12 @@ label{
     background-color: rgb(255, 255, 255);
   }
   .main-content p{
-    font-size: 2vh;
     margin-left: 1vh;
     margin: 1vh;
+    font-size: 1.5rem;
   }
   .main-content h2{
-    font-size: 4vh;
+    font-size: 2.5rem;
   }
   nav a{
      display: none;
