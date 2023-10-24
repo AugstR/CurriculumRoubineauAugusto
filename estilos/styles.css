@@ -1,10 +1,4 @@
 /* Cuerpo del sitio */
-
-header{
-  padding: 0;
-  margin: 0;
-  width: 100%;
-}
 body {
   font-family: 'San-Serif';
   margin: 0; 
@@ -21,18 +15,19 @@ body {
   margin: 0;
   padding: 0;
 }
+.parrafo{
+  text-align: justify;
+}
 
-/* Barra con Botones */
-nav {
-  background-color:black;
-  display: flex;
-  height: 5rem;
-  flex-shrink: 0;
-  flex-shrink: 0;
-  align-items: center;
-  padding: 10px 20px;
-  margin: 0;
-  justify-content: space-between;
+.parrafo ul {
+  list-style: none; /* Elimina la viñeta predeterminada */
+  padding: 0; /* Elimina el espacio entre el borde del contenedor y el contenido de la lista */
+}
+
+.parrafo ul li::before {
+  content: "\2022"; /* Utiliza un carácter Unicode (en este caso, el punto negro) como viñeta */
+  color: #FF0000; /* Cambia el color de la viñeta, en este caso a rojo */
+  font-weight: bold; /* Cambia el estilo del carácter de la viñeta (en este caso, negritas) */
 }
 
 .Botones{
@@ -46,24 +41,25 @@ nav {
   align-items: center;
   list-style: none;
 }
+.bg-color-bl{
+  background-color:#0B0B0B  !important
+}
+
+.color-wh{
+  color:white !important
+}
+
+.border-color-wh{
+  height: 0;
+  margin: 0;
+  overflow: hidden;
+  border-top: 1px solid white;
+}
+
 nav .Botones:hover{
   color: #ffe7b4;
 }
-nav ul{
-  margin: 1vh;
-  padding: 0vh;
-  display: flex;
-}
-nav h1{
-  color: white;
-  font-size: 2rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-nav h1:hover{
-  color: #ffe7b4;
-}
+
 .home{
   display: flex;
   align-items: flex-start;
@@ -78,7 +74,7 @@ label{
 .main-content {
   background-color:#0B0B0B;
   width: 100%;
-  height: 100vh;
+  text-align: center;
 }
 .main-content h1{
   color: white;
@@ -91,7 +87,7 @@ label{
 }
 .main-content p{
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
   padding: 0;
   margin: 0; 
 }
@@ -111,16 +107,6 @@ label{
   height: 50rem;
   flex-shrink: 0;
   background-image: url(../img/Home.png);
-  background-repeat: no-repeat;
-  background-position: right center;
-  position: relative;
-}
-/* Contenido de la página BIO*/
-.bio{
-  width: 100%;
-  height: 50rem;
-  flex-shrink: 0;
-  background-image: url(../img/Augusto.png);
   background-repeat: no-repeat;
   background-position: right center;
   position: relative;
@@ -186,6 +172,11 @@ label{
   
 }
 
+.foto-cv{
+  width: 100%;
+  object-fit: cover;
+}
+
 @media all and (max-width: 700px) {     /*cuando el dispositivo es como máximo de 700px*/
 
   input:checked~ul {
@@ -207,13 +198,6 @@ label{
   }
   li a{
     position: relative;
-  }
-  nav {
-    padding: 0;
-  }
-  nav ul {
-    display: none;
-    background-color: rgb(0, 0, 0);
   }
 
   label {      /* dibuja la etiqueta ☰  con formato botón */
@@ -237,17 +221,10 @@ label{
   .main-content h2{
     font-size: 2.5rem;
   }
-  nav a{
-     display: none;
-     background-color: #000000;
-  } 
   .main-content h1{
     font-size: 3vh;
     text-align: left;
     margin-left: 2vh;
 
-  }
-  nav ul{
-    display: block;
   }
 }

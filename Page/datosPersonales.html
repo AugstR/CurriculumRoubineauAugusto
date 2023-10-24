@@ -5,58 +5,105 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="../estilos/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    
     <title>Bio</title>
 </head>
 <body>
 
-    <header>
-      <nav>
-        <img src="../img/Logo.png" alt="iniciales">
-        <input type="checkbox" id="menu" hidden>
-        <label for="menu"> ☰ </label>
-        <ul class="datosp">
-          <li><a class="Botones" href="../index.html">Home</a></li>
-          <li><a class="Botones" href="./datosPersonales.html">Bio</a></li>
-          <li><a class="Botones" href="./experiencia.html">Experience</a></li>
-          <li><a class="Botones" href="./estudios.html">Studies</a></li>
-          <li><a class="Botones" href="./competencias.html">Competencies</a></li>
-        </ul>
-      </nav>
-      </header>  
+  <header>
+    <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html"><img src="../img/Logo.png" alt="iniciales"></a>
+        <button class="navbar-toggler color-wh" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon color-wh">
+          </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="Botones nav-link" href="datosPersonales.html">Bio</a>
+            </li>
+            <li><hr class="border-color-wh"></li>
+            <li class="nav-item">
+              <a class="nav-link Botones" href="experiencia.html">Experience</a>
+            </li>
+            <li><hr class="border-color-wh"></li>
+            <li class="nav-item">
+              <a class="Botones nav-link" href="estudios.html">Studies</a>
+            </li>
+            <li><hr class="border-color-wh"></li>
+            <li class="nav-item">
+              <a class="Botones nav-link" href="competencias.html">Competencies</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header> 
 
     <section class="main-content">
-      <div class="bio">
+      <div style="text-align: center;">
         <h2>Bio</h2>
-        <ul class="parrafo">
-          <p>Name: Augusto Roubineau</p>
-          <p>Location: Buenos Aires, Argentina</p>
-          <p>Age: 24 years old</p>
-          <p>·Currently pursuing a Bachelor's </p>
-          <p> degree in Information </p>
-          <p> Technology Management| UADE</p>
-          <p>Objectives:</p>
-          <p>·Seek employment opportunities to </p>
-          <p>apply my knowledge and skills in the</p>
-          <p>field of information technology.</p>
-          <p>·Make a meaningful contribution to</p>
-          <p> projects and teams by providing</p>
-          <p>innovative and efficient solutions</p>
-          <p>in the technology sector.</p>
-        </ul>
+        
+
+        <div class="container">
+          <div class="row">
+            <div class="parrafo col col-md-6">
+              <p>
+                Name: Augusto Roubineau
+                <br/>
+                Location: Buenos Aires, Argentina
+                <br/>
+                Age: 24 years old
+                <br/>
+                <br/>
+                Currently pursuing a Bachelor's 
+                degree in Information 
+                Technology Management| UADE
+                <br/><br/>
+                Objectives:
+              </p>
+              <ul>
+                <il>
+                  <p>
+                  Seek employment opportunities to 
+                  apply my knowledge and skills in the
+                  field of information technology.
+                </p>
+                </il>
+                <il>
+                  <p>
+                  Make a meaningful contribution to
+                  projects and teams by providing
+                  innovative and efficient solutions
+                  in the technology sector.
+                </p>
+                </il>
+              </ul> 
+                
+            
+            </div>
+            <div class="col-md-6">
+              <img src="../img/Augusto.png" class="foto-cv">
+            </div>
+          </div>
+        </div>
       </div>
       
       
     </section>
 
 
-    <footer class="footer">
+    <footer class="footer  bg-dark">
       <div class="contacto">
         <p>Contact: </p>
         <i class='bx bxl-gmail'></i> augustoroubineau@gmail.com
         <br>
         <a href="https://github.com/AugstR" target="_blank"><i class='bx bxl-github'></i></a>
         <a href="https://www.linkedin.com/in/augusto-roubineau-8aa39b226" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-        <p class="fin">© 2023 Augusto Roubineau.</p>
+        <p class="fin bg-dark">© 2023 Augusto Roubineau.</p>
       </div>
     </footer>   
 
