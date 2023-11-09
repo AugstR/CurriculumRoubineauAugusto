@@ -3,20 +3,19 @@ body {
   font-family: 'San-Serif';
   margin: 0; 
   padding: 0;
+  min-height: 100vh;
   width: 100%;
-  height: 100%;
 }
 .footer{
   background-color: black;
-  bottom: 0;
   left: 0;
-  position: relative;
   color:white;
   margin: 0;
   padding: 0;
 }
 .parrafo{
   text-align: justify;
+  margin-left: 1rem;
 }
 
 .parrafo ul {
@@ -72,13 +71,16 @@ label{
 }
 /* Contenido de la página*/
 .main-content {
+  background-image: url(../img/Bio.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
   background-color:#0B0B0B;
   width: 100%;
   text-align: center;
 }
 .main-content h1{
   color: white;
-  font-size: 7vh;
+  font-size: 4rem;
   font-weight: 2vh;
   padding: 0;
   margin: 0;
@@ -87,17 +89,21 @@ label{
 }
 .main-content p{
   color: white;
-  font-size: 1.6rem;
+  font-size: 2rem;
   padding: 0;
   margin: 0; 
 }
 .main-content h2{
   color: white;
   margin-left: 11rem;
-  font-size: 7vh;
+  font-size: 4rem;
   margin: 0;
   padding: 0;
 }
+/*
+.min-section{
+  min-height: 70vh !important;
+}*/
 .main-content ul{
   margin: 0;
 }
@@ -112,32 +118,55 @@ label{
   position: relative;
 }
 /* Contenido de la página Bio*/
+.foto {
+  align-items: start;
+}
 .foto-cv {
   border-radius: 50%;
+  max-width: 150px;
+  display: flex;
+  
 
 
 }
 /* Contenido de la página Experiences*/
-.experiencia{
-  background-image: url(../img/Experiencia.png);
-  width: 100%;
-  height: 50rem;
-  flex-shrink: 0;
-  background-repeat: no-repeat;
-}
+
 /* Contenido de la página Studies*/
 
-/* Contenido de la página Competencias*/
-.competencias{
+.fotos-rs{
   width: 100%;
-  height: 50rem;
-  flex-shrink: 0;
-  background-image: url(../img/Estudios.png);
-  background-repeat: no-repeat;
-  background-position: right center;
-  position: relative;
 }
 
+/* Contenido de la página Competencias*/
+.competencias h2{
+  text-align: center;
+}
+
+/* Contenido de la página Minigame*/
+.minigame{
+  background-image: url(../img/Cuestionario.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  color: white;
+  text-align: center;
+}
+#pregunta{
+  padding: 0;
+  color: white;
+  margin-left: 1rem;
+}
+#alternativas button{
+  padding: 5px;
+  margin: 1rem;
+  border-radius: 5px; 
+  background-color: #42b3ff; 
+  color: white; 
+  cursor: pointer;
+}
+button:hover {
+  background-color: #2980b9; /* Cambia el color de fondo al pasar sobre el botón */
+}
 /* Contenido del footer*/
 .contacto p{
   padding: 0;
@@ -172,59 +201,31 @@ label{
   
 }
 
-.foto-cv{
-  width: 100%;
-  object-fit: cover;
-}
 
 @media all and (max-width: 700px) {     /*cuando el dispositivo es como máximo de 700px*/
 
   input:checked~ul {
     display: block;
   }
-
-  input:checked~label { /*muestra todo el contenido de todas las etiquetas label*/
-    background: #fffefe;
+  .fondos {
+    display: none;
   }
-
-  label:hover {      /*cambia el color de ☰*/
-    background: darkgray;
-  }
+  
 
   li { 
     margin: 0px;
     text-align: left;
     display: block;
   }
-  li a{
-    position: relative;
-  }
-
-  label {      /* dibuja la etiqueta ☰  con formato botón */
-    box-sizing: border-box;
-    display: block;
-    border: 1px solid #ffe7b4;
-    border-radius: 5px;
-    width: 30px;
-    height: 30px;
-    line-height: 30px;
-    font-weight: bold;
-    text-align: center;
-    user-select: none;
-    background-color: rgb(255, 255, 255);
   }
   .main-content p{
-    margin-left: 1vh;
-    margin: 1vh;
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
   .main-content h2{
-    font-size: 2.5rem;
+    font-size: 2rem;
+    text-align: center;
   }
   .main-content h1{
-    font-size: 3vh;
-    text-align: left;
-    margin-left: 2vh;
-
+    font-size: 2rem;
+    text-align: center;
   }
-}
