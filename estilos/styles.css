@@ -14,21 +14,6 @@ body {
   margin: 0;
   padding: 0;
 }
-.parrafo{
-  text-align: justify;
-  margin-left: 1rem;
-}
-
-.parrafo ul {
-  list-style: none; 
-  padding: 0; 
-}
-
-.parrafo ul li::before {
-  content: "\2022"; 
-  color: #FF0000; 
-  font-weight: bold; 
-}
 
 .Botones{
   display: flex;
@@ -87,13 +72,13 @@ label{
 }
 .main-content p{
   color: white;
-  font-size: 2rem;
+  font-size: 1.rem;
   padding: 0;
   margin: 0; 
 }
 .main-content h2{
   color: white;
-  margin-left: 11rem;
+  text-align: center;
   font-size: 4rem;
   margin: 0;
   padding: 0;
@@ -104,6 +89,25 @@ label{
   margin-top: 2rem;
   margin-bottom: 2rem;
 }
+.parrafo{
+  text-align: justify;
+  margin-left: 2rem;
+}
+
+.parrafo ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+.parrafo ul li::before {
+  content: "\2022"; 
+  color: #FF0000; 
+  font-weight: bold; 
+}
+
+
+
+
 /* Contenido de la página HOME*/
 .foto-home{
   background-size: cover;
@@ -115,14 +119,31 @@ label{
 
 }
 /* Contenido de la página Bio*/
+.parrafoBio{
+  text-align: justify;
+  margin-left: 4rem;
+}
+
+.parrafoBio ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+.parrafoBio ul li::before {
+  content: "\2022"; 
+  color: #FF0000; 
+  font-weight: bold; 
+}
+
 .foto {
   align-items: start;
 }
+
 .foto-cv {
   border-radius: 50%;
   max-width: 150px;
   display: flex;
-  margin-left: 1rem;
+  margin-left: 4rem;
 }
 
 /* Contenido de la página Experiences*/
@@ -254,21 +275,9 @@ button:hover {
     display: none;
   }
   
-
   li { 
     margin: 0px;
     text-align: left;
     display: block;
   }
-  }
-  .main-content p{
-    font-size: 1rem;
-  }
-  .main-content h2{
-    font-size: 2rem;
-    text-align: center;
-  }
-  .main-content h1{
-    font-size: 2rem;
-    text-align: center;
   }
