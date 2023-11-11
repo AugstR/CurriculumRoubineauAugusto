@@ -176,7 +176,7 @@ label{
   padding: 2rem;
   display: inline-block;
   background-color: lightgrey;
-  margin: 10px;
+  margin-top: 7rem;
 }
 
 .pantalla h1,p{
@@ -194,8 +194,9 @@ label{
   max-width: 15h;
   height: 4vh;
   margin: 0.3rem;
-  background-color: #42b3ff; 
-  color: white; 
+  border-radius: 5px;
+  background-color: #ffe7b4;; 
+  color: black; 
   cursor: pointer;
 }
 
@@ -277,14 +278,30 @@ button:hover {
   input:checked~ul {
     display: block;
   }
+
   .fondos {
     display: none;
+    background-size: auto;
+    background-repeat: no-repeat;
   }
-  
-  li { 
-    margin: 0px;
-    text-align: left;
-    display: block;
+
+  .bio{
+    background-image: url(../img/Home.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+  .experiencia{
+    background-image: url(../img/Experiencia.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .competencias{
+    background-image: url(../img/Estudios.png);
+    background-size: cover;
+    background-repeat: no-repeat;
   }
   }
   .main-content h2{
@@ -293,4 +310,16 @@ button:hover {
     font-size: 1.8rem;
     margin: 0;
     padding: 0;
+  }
+
+  .main-content p{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .parrafoBio{
+    margin-left: 1rem;
+    margin-right: 1rem;
+  }
+  .parrafo{
+    margin-left: 0;
   }
