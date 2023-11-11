@@ -126,6 +126,39 @@
       }
     }
 
+    function mostrarResultadoFinal() {
+      elementoPregunta.textContent = 'Juego terminado. Puntaje: ' + puntaje + ' de ' + preguntas.length;
+      elementoOpciones.innerHTML = '';
+
+      // Agregar botones para volver a intentar y dejar una sugerencia
+      const botonReintentar = document.createElement('button');
+      botonReintentar.textContent = 'Volver a intentar';
+      botonReintentar.addEventListener('click', reiniciarJuego);
+
+      const seccionSugerencia = document.createElement('div');
+      seccionSugerencia.innerHTML = `
+        <p>Deja una sugerencia:</p>
+        <textarea id="sugerencia" rows="4" cols="50"></textarea>
+        <button onclick="enviarSugerencia()">Enviar sugerencia</button>
+      `;
+
+      elementoOpciones.appendChild(botonReintentar);
+      elementoOpciones.appendChild(seccionSugerencia);
+    }
+
+    function reiniciarJuego() {
+      preguntaActual = 0;
+      puntaje = 0;
+      mostrarPregunta();
+    }
+
+    function enviarSugerencia() {
+      const sugerencia = document.getElementById('sugerencia').value;
+      // Aquí puedes realizar acciones con la sugerencia, por ejemplo, enviarla a un servidor
+      alert('Sugerencia enviada: ' + sugerencia);
+    }
+
+
 
     mostrarPregunta();
   </script>

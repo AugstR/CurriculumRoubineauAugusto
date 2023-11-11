@@ -287,3 +287,10 @@ button:hover {
     display: block;
   }
   }
+  .main-content h2{
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0;
+    padding: 0;
+  }
