@@ -27,30 +27,32 @@
             </li>
             <li><hr class="border-color-wh"></li>
             <li class="nav-item">
-              <a class="nav-link Botones" href="Experiences.html">Experience</a>
+              <a class="nav-link Botones" href="ExperienciaLaboral.html">ExperienciaLaboral</a>
             </li>
             <li><hr class="border-color-wh"></li>
             <li class="nav-item">
-              <a class="Botones nav-link" href="Studies.html">Studies</a>
+              <a class="Botones nav-link" href="Estudios.html">Estudios</a>
             </li>
             <li><hr class="border-color-wh"></li>
             <li class="nav-item">
-              <a class="Botones nav-link" href="Competencies.html">Competencies</a>
+              <a class="Botones nav-link" href="Competencias.html">Competecias</a>
             </li>
             <li><hr class="border-color-wh"></li>
             <li class="nav-item">
-              <a class="Botones nav-link" href="Minigame.html">Cuestionario</a>
+              <a class="Botones nav-link" href="Cuestionario.html">Cuestionario</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
-  <div class="minigame">
-    <h1>Juego de Preguntas y Respuestas</h1>
-  <p id="preguntas"></p>
-  <div id="alternativas"></div>
-  <p id="feedback"></p>
+  <div class="minigame col-md-12">
+    <div class="pantalla">
+      <h1>Juego de Preguntas y Respuestas</h1><br><br>
+      <p id="preguntas"></p>
+      <div id="alternativas"></div>
+      <p id="feedback"></p>
+    </div>
 
   <script>
     const preguntas = [
@@ -65,9 +67,14 @@
         respuesta: 1
       },
       {
-        pregunta: "¿Cual es mi Nacionalidad?",
-        opciones: ["Perú", "Chile", "Uruguay", "Argentina"],
+        pregunta: "¿Nivel de Ingles?",
+        opciones: ["Basico", "Medio", "Nativo", "Avanzado"],
         respuesta: 3
+      },
+      {
+        pregunta: "Donde realicé una pasantia?",
+        opciones: ["Unne", "Banco Santander", "Motorola", "Mercado Libre"],
+        respuesta: 0
       }
     ];
 
