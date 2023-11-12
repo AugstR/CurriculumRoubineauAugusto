@@ -46,13 +46,12 @@
       </div>
     </nav>
   </header>
-  <div class="minigame col-md-12">
-    <div class="pantalla">
-      <h1>Juego de Preguntas y Respuestas</h1><br><br>
-      <p id="preguntas"></p>
+  <section class="main-content">
+    <div class="minigame col-md-12 ">
+      <h1>Cuestionario</h1><br><br>
+      <p id="preguntas"></p><br>
       <div id="alternativas"></div>
       <p id="feedback"></p>
-    </div>
 
   <script>
     const preguntas = [
@@ -120,30 +119,25 @@
       if (preguntaActual < preguntas.length) {
         mostrarPregunta();
       } else {
-        elementoPregunta.textContent = 'Juego terminado. Puntaje: ' + puntaje + ' de ' + preguntas.length;
-        elementoOpciones.innerHTML = '';
-        elementoFeedback.textContent = '';
+        mostrarResultadoFinal();
       }
     }
 
     function mostrarResultadoFinal() {
-      elementoPregunta.textContent = 'Juego terminado. Puntaje: ' + puntaje + ' de ' + preguntas.length;
+      elementoPregunta.textContent = 'Cuestionario terminado. Obtuviste ' + puntaje + ' preguntas correctas de ' + preguntas.length;
       elementoOpciones.innerHTML = '';
 
-      // Agregar botones para volver a intentar y dejar una sugerencia
       const botonReintentar = document.createElement('button');
       botonReintentar.textContent = 'Volver a intentar';
       botonReintentar.addEventListener('click', reiniciarJuego);
 
-      const seccionSugerencia = document.createElement('div');
-      seccionSugerencia.innerHTML = `
-        <p>Deja una sugerencia:</p>
-        <textarea id="sugerencia" rows="4" cols="50"></textarea>
-        <button onclick="enviarSugerencia()">Enviar sugerencia</button>
-      `;
+      
+      const botonIrAPrincipal = document.createElement('button');
+      botonIrAPrincipal.textContent = 'Volver a la página principal';
+      botonIrAPrincipal.addEventListener('click', irAPrincipal);
 
       elementoOpciones.appendChild(botonReintentar);
-      elementoOpciones.appendChild(seccionSugerencia);
+      elementoOpciones.appendChild(botonIrAPrincipal);
     }
 
     function reiniciarJuego() {
@@ -152,18 +146,18 @@
       mostrarPregunta();
     }
 
-    function enviarSugerencia() {
-      const sugerencia = document.getElementById('sugerencia').value;
-      alert('Sugerencia enviada: ' + sugerencia);
+    function irAPrincipal() {
+    window.location.href = "../index.html";
     }
-
-
 
     mostrarPregunta();
   </script>
 
 
   </div>
+
+  </section>
+  
   
 <footer class="footer">
   <div class="contacto">

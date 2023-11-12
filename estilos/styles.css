@@ -26,20 +26,6 @@ body {
   align-items: center;
   list-style: none;
 }
-.bg-color-bl{
-  background-color:#0B0B0B  !important
-}
-
-.color-wh{
-  color:white !important
-}
-
-.border-color-wh{
-  height: 0;
-  margin: 0;
-  overflow: hidden;
-  border-top: 1px solid white;
-}
 
 nav .Botones:hover{
   color: #ffe7b4;
@@ -67,7 +53,7 @@ label{
   font-weight: 2vh;
   padding: 0;
   margin: 0;
-  margin-left: 4rem;
+  align-items: center;
   position: relative;
 }
 .main-content p{
@@ -159,18 +145,15 @@ label{
 .foto-cv {
   border-radius: 50%;
   max-width: 150px;
-  display: flex;
-  margin-left: 16rem;
+  margin-left: 4rem;
   border:2px solid grey;
+  
 }
 
 /* Contenido de la página Experiences*/
 
 /* Contenido de la página Studies*/
 
-.fotos-rs{
-  width: 100%;
-}
 
 /* Contenido de la página Competencias*/
 .competencias h2{
@@ -191,6 +174,9 @@ label{
   display: inline-block;
   background-color: lightgrey;
   margin-top: 7rem;
+  color: black;
+  min-height: 15rem;
+  min-width: 45rem;
 }
 
 #pregunta{
@@ -262,8 +248,13 @@ button:hover {
     background-repeat: no-repeat;
   }
 
-  .bio{
+  .home{
     background-image: url(../img/Home.png);
+    background-repeat: no-repeat;
+  }
+
+  .bio{
+    background-image: url(../img/celu.jpg);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -280,6 +271,12 @@ button:hover {
     background-size: cover;
     background-repeat: no-repeat;
   }
+
+  .estudios{
+    background-image: url(../img/Estudios.png);
+    background-repeat: no-repeat;
+  }
+
   }
   .main-content h2{
     color: white;
@@ -300,10 +297,6 @@ button:hover {
   .parrafo{
     margin-left: 0;
   }
-  .foto-cv {
-    border-radius: 50%;
-    max-width: 150px;
-    display: flex;
-    margin-left: 8rem;
-    border:2px solid grey;
+  .responsive{
+    min-width: auto;
   }
