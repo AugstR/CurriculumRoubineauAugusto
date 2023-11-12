@@ -122,7 +122,20 @@ label{
   width: 100%;
 
 }
+
 /* Contenido de la página Bio*/
+.foto-cv2 {
+  border-radius: 50%;
+  max-width: 150px;
+  display: flex;
+  margin-left: 5rem;
+  border:2px solid grey;
+}
+.bio{
+  background-image: url("../img/negro.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .parrafoBio{
   text-align: justify;
   margin-left: 4rem;
@@ -147,7 +160,8 @@ label{
   border-radius: 50%;
   max-width: 150px;
   display: flex;
-  margin-left: 4rem;
+  margin-left: 16rem;
+  border:2px solid grey;
 }
 
 /* Contenido de la página Experiences*/
@@ -179,10 +193,6 @@ label{
   margin-top: 7rem;
 }
 
-.pantalla h1,p{
-  color: black;
-}
-
 #pregunta{
   padding: 0;
   color: white;
@@ -199,39 +209,6 @@ label{
   color: black; 
   cursor: pointer;
 }
-
-@keyframes respuestaCorrecta {
-  0% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #4CAF50; 
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-@keyframes respuestaIncorrecta {
-  0% {
-    background-color: transparent;
-  }
-  50% {
-    background-color: #FF5733; 
-  }
-  100% {
-    background-color: transparent;
-  }
-}
-
-.correcto {
-  animation: respuestaCorrecta 1s;
-}
-
-.incorrecto {
-  animation: respuestaIncorrecta 1s;
-}
-
 
 button:hover {
   background-color: #2980b9; 
@@ -322,4 +299,11 @@ button:hover {
   }
   .parrafo{
     margin-left: 0;
+  }
+  .foto-cv {
+    border-radius: 50%;
+    max-width: 150px;
+    display: flex;
+    margin-left: 8rem;
+    border:2px solid grey;
   }
